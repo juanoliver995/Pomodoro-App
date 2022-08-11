@@ -1,0 +1,489 @@
+:root {
+    --bg-color: #898AA6;
+    --color-main: #D6EFED;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-main);
+}
+
+#app {
+    border: 3px solid var(--color-main);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    margin: 50px auto;
+}
+
+#app #value {
+    font-size: 60px;
+    font-weight: 500;
+    color: var(--color-main);
+}
+
+#app #taskName {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-main);
+    display: grid;
+    place-items: center;
+}
+
+.tasks-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tasks {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.task {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: var(--color-main);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.task button {
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: var(--bg-color) 1px solid;
+    outline: none;
+    background-color: var(--color-main);
+}
+
+.task button:hover {
+    background-color: var(--bg-color);
+    color: white;
+}
+
+.form {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.form form {
+    width: 100%;
+
+}
+
+.form #itTask {
+    padding: 6px 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: transparent;
+    outline: none;
+    width: 69%;
+}
+
+.form #btn-add {
+    width: 28%;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: transparent;
+    outline: none;
+    background-color: var(--color-main);
+}
+
+.done {
+    margin-right: 10px;
+}
+
+.task p {
+    display: flex;
+    align-items: center;
+}
+
+.task img {
+    width: 20px;
+}
+
+
+/* Inicio Usuario */
+
+.container__inicio-usuario {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.container__inicio-usuario span {
+    display: block;
+    white-space: nowrap;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--color-main);
+    margin-bottom: 20px;
+    border-right: 1px solid;
+    width: 11ch;
+    animation: typing 2s steps(11), cursos .5s infinite step-end alternate;
+    overflow: hidden;
+    letter-spacing: 1px;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+.container__inicio-usuario h4 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#form-user {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#userName {
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: transparent;
+    outline: none;
+}
+
+#btn-add-user {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: transparent;
+    outline: none;
+    background-color: var(--color-main);
+}
+
+.container-btn-next {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
+
+.btn-next {
+    width: 40%;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: transparent;
+    outline: none;
+    background-color: var(--color-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.btn-next img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.errorUser {
+    color: red;
+    display: block;
+    opacity: 0;
+    text-align: center;
+}
+
+.container-info {
+    max-width: 500px;
+    display: grid;
+    place-items: center;
+    margin: 20px auto 0 auto;
+}
+
+.container-info h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--color-main);
+    text-align: center;
+    line-height: 55px;
+}
+
+.container-info h4 {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.container-info span {
+    color: var(--color-main);
+}
+
+.container-info p {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.btn-info-next {
+    max-width: 150px;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: transparent;
+    outline: none;
+    background-color: var(--color-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.btn-info-next img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.container-config {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+}
+
+.container-config h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-main);
+}
+
+.container-config button {
+    background-color: transparent;
+    border: transparent;
+}
+
+.container-config button svg {
+    fill: var(--color-main);
+    cursor: pointer;
+}
+
+.options {
+    position: absolute;
+    background-color: var(--color-main);
+    padding: 20px;
+    border-radius: 4px;
+    top: 40px;
+    right: -5px;
+    transition: all .5s;
+    margin-top: 10px;
+    transform: translateX(250px);
+}
+
+.options.active {
+    transition: all .5s;
+    transform: translateX(0px);
+}
+
+
+.options ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.options ul li button {
+    width: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.options ul li button:hover {
+    background-color: var(--bg-color);
+}
+
+.config-time {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+.modal-pomodoro {
+    background-color: var(--bg-color);
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 2;
+}
+
+.modal-pomodoro h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-main);
+    margin: 20px auto;
+    text-align: center;
+}
+
+.modal-pomodoro form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-pomodoro form input[type="number"] {
+    padding: 0 5px;
+}
+
+.modal-pomodoro form input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 20px;
+    border-radius: 5px;
+    border: transparent;
+    outline: none;
+}
+
+#pomodoro-time {
+    padding: 5px;
+}
+
+#close-modal {
+    width: 100%;
+    background-color: var(--color-main);
+    height: 20px;
+    border-radius: 5px;
+    border: transparent;
+    outline: none;
+    margin-top: 20px;
+}
+
+#close-modal-break {
+    width: 100%;
+    background-color: var(--color-main);
+    height: 20px;
+    border-radius: 5px;
+    border: transparent;
+    outline: none;
+    margin-top: 20px;
+}
+
+.error-config-pomodoro {
+    opacity: 0;
+    color: red;
+    text-align: center;
+}
+
+.error-config-pomodoro.active {
+    opacity: 1;
+}
+
+.error-config-break {
+    opacity: 0;
+    color: red;
+    text-align: center;
+}
+
+.error-config-break.active {
+    opacity: 1;
+}
+
+.container__btn-clear {
+    width: 100%;
+    background-color: var(--color-main);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#clear-tasks {
+    width: 95%;
+    max-width: 500px;
+    background-color: var(--bg-color);
+    padding: 5px;
+    border-radius: 5px;
+    border: transparent;
+    outline: none;
+    margin: 10px auto;
+    color: white;
+    font-size: 18px;
+}
